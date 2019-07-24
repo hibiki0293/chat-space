@@ -15,11 +15,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, index: true|
 |email|text|null: false, unique: true|
 
 ### Association
-- belongs_to :member
+- has_many :members
 - has_many :messages
 - has_many :groups, through: :members
 
