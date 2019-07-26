@@ -1,0 +1,13 @@
+@mixin -textstyle() {
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
