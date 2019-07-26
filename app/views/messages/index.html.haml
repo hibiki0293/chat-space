@@ -1,0 +1,34 @@
+.header  グループを作成しました
+.leftside
+  .leftside__user
+    .leftside__user_user-name  name
+    .leftside__user_user-menu
+      %i.fa.fa-edit
+      %i.fa.fa-cog
+  .leftside__groups
+    .leftside__groups_group
+      .leftside__groups_group-name  group
+      .leftside__groups_group-topmes  message
+
+
+
+.rightside
+  .rightside__group
+    .rightside__group_name  group1
+    .rightside__group_members  Member: 12345
+    .rightside__group_edit  Edit
+
+  .rightside__comments
+    .rightside__comments_user
+      .rightside__comments_user-name  name
+      .rightside__comments_user-date  2001/03/27
+    .rightside__comments_text  message
+
+  .rightside__form
+    %input.rightside__form_input{placeholder: "type a message", type: "text"}
+    %input.rightside__form_send{type: "submit", value: "Send"}
+    .rightside__form_imagebox
+      %label.rightside__form_label
+        %input.rightside__form_file{type: "file"}
+        %i.fa.fa-image    
+
