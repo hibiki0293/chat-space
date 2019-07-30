@@ -1,16 +1,20 @@
-= render 'devise/shared/side_bar'
 .rightside
   .rightside__group
-    .rightside__group_name  
-      = @group.name
-    .rightside__group_members
-      Member:
-      - @group.users.each do |user| 
-        = user.name
+    .rightside__group_name  group1
+    .rightside__group_members  Member: 12345
     .rightside__group_edit 
       = link_to 'Edit', edit_group_path(@group.id)
+
   .rightside__comments
-    = render @messages # partialsで_messageファイルを指定して、collectionオプションで配列の中から情報を取り出している
+    .rightside__comments_user
+      .rightside__comments_user-name
+        message.user.name
+      .rightside__comments_user-date 
+        message.created_at.strftime("%Y/%m/%d %H:%M")
+    .rightside__comments_text 
+      message.content
+      image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
   .rightside__form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'rightside__form_input', placeholder: 'type a message'
@@ -18,4 +22,5 @@
       .rightside__form_imagebox
         = f.label :image, class: 'rightside__form_label' do
           = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'rightside__form_file'
+          = f.file_field :image, class: 'rightside__form_file'   
+
