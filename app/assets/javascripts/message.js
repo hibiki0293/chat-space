@@ -29,18 +29,19 @@ $(function() {
       dataType: 'json',
       processData: false,
       contentType: false
-  })
-  .done(function(data){
-    var html = buildHTML(data);
-    $('.rightside__comments').append(html)
-    $('#new_message')[0].reset()
-    $('.rightside__comments').animate({scrollTop: $('.rightside__comments')[0].scrollHeight})
-  })
-  .fail(function(){
-    alert('error');
     })
-  .always(function(data){
-    $('.rightside__form_send').prop('disabled', false);
+  
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.rightside__comments').append(html)
+      $('#new_message')[0].reset()
+      $('.rightside__comments').animate({scrollTop: $('.rightside__comments')[0].scrollHeight})
+    })
+    .fail(function(){
+      alert('error');
+      })
+    .always(function(data){
+      $('.rightside__form_send').prop('disabled', false);
     })
 
   })
