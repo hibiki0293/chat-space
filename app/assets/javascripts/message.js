@@ -1,6 +1,7 @@
 $(function() {
   
   function buildHTML(message){
+    var Addimage = (message.image.url !== null)? `<img src="${message.image.url}" class="lower-message__image">`:''
     var html = `
       <div class="rightside__comments_user">
       <div class="rightside__comments_user-name">
@@ -11,7 +12,7 @@ $(function() {
         </div>
       <div class="rightside__comments_text">
         ${message.content}
-        <img src="${message.image.url}" class="lower-message__image" onerror="this.style.display='none'"/>  
+        ${Addimage}
         </div>  
       </div>
     </div>`
