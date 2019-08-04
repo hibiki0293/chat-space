@@ -49,7 +49,6 @@ $(function() {
 
 
   var reloadMessages = function() {
-    console.log("aaaa")
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     last_message_id =  $(".rightside__comments_user:last").data('id');
     group_id = $(".rightside__group").data('id');
@@ -63,7 +62,6 @@ $(function() {
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log(messages);
       var insertHTML = '';
       messages.forEach(function(message){
         insertHTML = buildHTML(message)
@@ -73,7 +71,7 @@ $(function() {
 
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   };
   group_id = $(".rightside__group").data('id');
