@@ -1,6 +1,6 @@
 = render 'devise/shared/side_bar'
 .rightside
-  .rightside__group
+  .rightside__group{data: {id: @group.id}}
     .rightside__group_name  
       = @group.name
     .rightside__group_members
