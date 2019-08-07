@@ -101,6 +101,7 @@ body,html{
     height: calc(100vh - 200px);
     background-color: #fafafa;
     padding: 46px 40px;
+    position: relative;
     &_user{
       padding-bottom: 40px;
       &-name{
@@ -115,12 +116,11 @@ body,html{
         color: #999999;
         margin-bottom: 10px;
       }
+    
+    }
     &_text{
       font-size: 14px;
       color: #434a54;
-      position: absolute;
-      left: 0;
-    }
     }
   }
   &__form{
