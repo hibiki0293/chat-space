@@ -14,6 +14,9 @@ body,html{
 }
 
 .leftside {
+  .fa{
+    color: white;
+  }
   @include clearfix();
   float: left;
   width: 300px;
@@ -153,7 +156,4 @@ body,html{
 .lower-message__image{
   width: 200px;
   height: 200px;
-}
-.fa{
-  color: white;
 }
