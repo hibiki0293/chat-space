@@ -2,6 +2,7 @@ $(function() {
   
   function buildHTML(message){
     var Addimage = (message.image.url !== null)? `<img src="${message.image.url}" class="lower-message__image">`:''
+  
     var html = `
       <div class="rightside__comments_user" data-id = "${message.id}">
       <div class="rightside__comments_user-name">
