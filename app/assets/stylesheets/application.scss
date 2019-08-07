@@ -118,9 +118,11 @@ body,html{
       }
     
     }
-    &_text{
-      font-size: 14px;
-      color: #434a54;
+    &_input{
+      &-text{
+        font-size: 14px;
+        color: #434a54;
+      }
     }
   }
   &__form{

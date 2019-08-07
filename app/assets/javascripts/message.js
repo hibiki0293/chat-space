@@ -11,9 +11,13 @@ $(function() {
       <div class="rightside__comments_user-date">
         ${message.created_at}
         </div>
-      <div class="rightside__comments_text">
+      <div class="rightside__comments_input">
+      <div class="rightside__comments_input-text">
         ${message.content}
+        </div>
+      <div class="rightside__comments_input-image">  
         ${Addimage}
+        </div>
         </div>  
       </div>
     </div>`

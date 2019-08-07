@@ -3,7 +3,9 @@
     = message.user.name
   .rightside__comments_user-date 
     = message.created_at.strftime("%Y/%m/%d %H:%M")  
-  .rightside__comments_text 
-    = message.content
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  .rightside__comments_input
+    .rightside__comments_input-text 
+      = message.content
+    .rightside__comments_input-image  
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
