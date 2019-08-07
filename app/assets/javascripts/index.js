@@ -30,6 +30,10 @@ $(function(){
           $('#user-search-result').append(html);
         });
       }
+      else{
+        html = `一致するユーザーがいません`
+        $('#user-search-result').append(html)
+      }    
     })
     .fail(function(){
       alert('失敗しました');
