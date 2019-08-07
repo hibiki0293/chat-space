@@ -4,9 +4,9 @@
       = current_user.name
     .leftside__user_user-menu
       = link_to new_group_path do
-        %i.fa.fa-edit
+        %i.fa.fa-edit 
       = link_to edit_user_path(current_user) do
-        %i.fa.fa-cog  
+        %i.fa.fa-cog 
   .leftside__groups
     .leftside__groups_group
       - current_user.groups.each do |group|

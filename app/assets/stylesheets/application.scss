@@ -32,7 +32,6 @@ body,html{
       position: absolute;
       top: 40px;
       left: 240px;
-      color: white;
     }
   }
   &__groups{
@@ -85,11 +84,13 @@ body,html{
       line-height: 40px;
       padding: 0 20px;
       border: solid 1px #38aef0;
-      color: #38AEF0;
       position: absolute;
       right: 40px;
       top: 28px;
-      text-decoration: none;
+      a{
+        text-decoration: none;
+        color: #38AEF0;
+      }
     }
   }  
   &__comments{
@@ -152,4 +153,7 @@ body,html{
 .lower-message__image{
   width: 200px;
   height: 200px;
+}
+.fa{
+  color: white;
 }
